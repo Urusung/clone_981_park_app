@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="clone_981_park_app"
+        android:label="CLONE 9.81 PARK"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
