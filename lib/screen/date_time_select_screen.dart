@@ -58,7 +58,6 @@ class _DateTimeSelectSelectScreen extends ConsumerState<DateTimeSelectScreen> {
     final numberOfPeopleToPurchaseValue =
         ref.read(NumberOfPeopleToPurchaseProvider);
     final deviceWidth = MediaQuery.of(context).size.width;
-    final deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       appBar: AppBar(
@@ -424,7 +423,7 @@ class _DateTimeSelectSelectScreen extends ConsumerState<DateTimeSelectScreen> {
               fixedSize: MaterialStateProperty.all(
                 Size(
                   deviceWidth - 32,
-                  deviceHeight / 16,
+                  deviceWidth / 7.4,
                 ),
               ),
               shape: MaterialStateProperty.all(
@@ -596,7 +595,7 @@ class _DateTimeSelectSelectScreen extends ConsumerState<DateTimeSelectScreen> {
                                       fixedSize: MaterialStateProperty.all(
                                         Size(
                                           deviceWidth,
-                                          deviceHeight / 16,
+                                          deviceWidth / 7.4,
                                         ),
                                       ),
                                       shape: MaterialStateProperty.all(
