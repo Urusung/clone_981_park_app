@@ -3,17 +3,17 @@ import 'package:flutter/cupertino.dart';
 class TicketAdditionalWidget extends StatelessWidget {
   const TicketAdditionalWidget({
     super.key,
-    required this.deviceWidth,
     required this.data,
     required this.imageUrl,
   });
 
-  final double deviceWidth;
   final data;
   final imageUrl;
 
   @override
   Widget build(BuildContext context) {
+    final deviceWidth = MediaQuery.of(context).size.width;
+
     return Container(
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 210, 227, 255),

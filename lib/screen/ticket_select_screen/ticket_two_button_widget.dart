@@ -1,6 +1,7 @@
 import 'package:clone_981_park_app/model/time_model.dart';
 import 'package:clone_981_park_app/riverpod/ticket_select_screen_provider.dart';
-import 'package:clone_981_park_app/screen/date_time_select_screen.dart';
+import 'package:clone_981_park_app/riverpod/time_proivder.dart';
+import 'package:clone_981_park_app/screen/date_time_select_screen/date_time_select_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
@@ -8,15 +9,13 @@ import 'package:intl/intl.dart';
 class TicketTwoButtonWidget extends ConsumerWidget {
   const TicketTwoButtonWidget({
     super.key,
-    required this.deviceWidth,
-    required this.basicValue,
   });
-
-  final double deviceWidth;
-  final basicValue;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final basicValue = ref.watch(TimeProvider);
+    final deviceWidth = MediaQuery.of(context).size.width;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

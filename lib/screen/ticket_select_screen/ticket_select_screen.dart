@@ -1,7 +1,4 @@
-import 'package:clone_981_park_app/model/time_model.dart';
-import 'package:clone_981_park_app/riverpod/ticket_select_screen_provider.dart';
 import 'package:clone_981_park_app/riverpod/time_proivder.dart';
-import 'package:clone_981_park_app/screen/date_time_select_screen.dart';
 import 'package:clone_981_park_app/screen/ticket_select_screen/ticket_additional_widget.dart';
 import 'package:clone_981_park_app/screen/ticket_select_screen/ticket_informaion_widget.dart';
 import 'package:clone_981_park_app/screen/ticket_select_screen/ticket_two_button_widget.dart';
@@ -9,17 +6,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intl/intl.dart';
 
 class TicketSelectScreen extends ConsumerWidget {
-  TicketSelectScreen({super.key});
+  const TicketSelectScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final basicValue = ref.watch(TimeProvider);
-
     final deviceWidth = MediaQuery.of(context).size.width;
-    final deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -117,7 +111,6 @@ class TicketSelectScreen extends ConsumerWidget {
                       child: Row(
                         children: [
                           TicketAdditionalWidget(
-                            deviceWidth: deviceWidth,
                             data: 'GR-E/D',
                             imageUrl: 'assets/images/handle.png',
                           ),
@@ -127,7 +120,6 @@ class TicketSelectScreen extends ConsumerWidget {
                             ),
                           ),
                           TicketAdditionalWidget(
-                            deviceWidth: deviceWidth,
                             data: '초급,중급,중상급',
                             imageUrl: 'assets/images/wheel.png',
                           ),
@@ -175,8 +167,7 @@ class TicketSelectScreen extends ConsumerWidget {
                         right: 16.0,
                         bottom: 16.0,
                       ),
-                      child: TicketTwoButtonWidget(
-                          deviceWidth: deviceWidth, basicValue: basicValue),
+                      child: TicketTwoButtonWidget(),
                     ),
                   ],
                 ),
