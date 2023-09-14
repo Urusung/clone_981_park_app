@@ -9,7 +9,7 @@ river_pod 상태관리 라이브러리와 json파일을 사용하여 9.81 Park C
 </p>
 
 <p align="justify">
-<img src="https://github.com/Urusung/clone_981_park_app/assets/96646202/a58acf84-5182-4101-9635-a890fb92b679">
+<img src="https://user-images.githubusercontent.com/96646202/267838581-a58acf84-5182-4101-9635-a890fb92b679.gif">
 </p>
 
 <br>
