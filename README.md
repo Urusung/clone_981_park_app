@@ -1,11 +1,11 @@
-# BleScan
+# 9.81 Park Clone
 
 목차
 
 ## 프로젝트 소개
 
 <p align="justify">
-flutter_reactive_ble 라이브러리를 사용하여 BleScan앱 개발
+river_pod 상태관리 라이브러리와 json파일을 사용하여 9.81 Park Clone 앱 개발
 </p>
 
 <p align="justify">
@@ -18,10 +18,6 @@ flutter_reactive_ble 라이브러리를 사용하여 BleScan앱 개발
 ### Dart
 
 ### Flutter
-
-### flutter_reactive_ble (블루투스 라이브러리)
-
-### permission_handler (권한 요청 라이브러리)
 
 ### river_pod (상태관리 라이브러리)
 
