@@ -16,7 +16,7 @@ class TicketAdditionalWidget extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 210, 227, 255),
+        color: const Color.fromARGB(255, 210, 227, 255),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
@@ -24,11 +24,11 @@ class TicketAdditionalWidget extends StatelessWidget {
           Container(
             width: deviceWidth / 16,
             height: deviceWidth / 16,
-            padding: EdgeInsets.all(
+            padding: const EdgeInsets.all(
               4.0,
             ),
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 7, 105, 254),
+              color: const Color.fromARGB(255, 7, 105, 254),
               borderRadius: BorderRadius.circular(deviceWidth / 8),
             ),
             child: Image.asset(
@@ -36,12 +36,12 @@ class TicketAdditionalWidget extends StatelessWidget {
             ),
           ),
           Padding(
-            padding:
-                EdgeInsets.only(top: 4.0, right: 8.0, bottom: 4.0, left: 4.0),
+            padding: const EdgeInsets.only(
+                top: 4.0, right: 8.0, bottom: 4.0, left: 4.0),
             child: Text(
               data,
               style: TextStyle(
-                  color: Color.fromARGB(255, 7, 105, 254),
+                  color: const Color.fromARGB(255, 7, 105, 254),
                   fontSize: deviceWidth / 30,
                   fontWeight: FontWeight.w400,
                   height: 1),

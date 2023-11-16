@@ -19,12 +19,12 @@ class DateSelectHorizontalScrollWidget extends ConsumerWidget {
 
     final deviceWidth = MediaQuery.of(context).size.width;
     return Container(
-      color: Color.fromARGB(255, 243, 243, 243),
-      padding: EdgeInsets.only(top: 16.0, bottom: 24.0, right: 16),
+      color: const Color.fromARGB(255, 243, 243, 243),
+      padding: const EdgeInsets.only(top: 16.0, bottom: 24.0, right: 16),
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
                 top: 16.0, left: 16.0, right: 16.0, bottom: 16.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,7 +53,8 @@ class DateSelectHorizontalScrollWidget extends ConsumerWidget {
             ),
           ),
           ScrollConfiguration(
-            behavior: MaterialScrollBehavior().copyWith(overscroll: false),
+            behavior:
+                const MaterialScrollBehavior().copyWith(overscroll: false),
             child: SingleChildScrollView(
               controller: scrollController,
               scrollDirection: Axis.horizontal,
@@ -85,7 +86,7 @@ class DateSelectHorizontalScrollWidget extends ConsumerWidget {
                                 borderRadius:
                                     BorderRadius.circular(deviceWidth / 5),
                                 color: e.date == selectDate
-                                    ? Color.fromARGB(255, 7, 105, 254)
+                                    ? const Color.fromARGB(255, 7, 105, 254)
                                     : Colors.transparent,
                               ),
                               child: Center(
@@ -104,7 +105,7 @@ class DateSelectHorizontalScrollWidget extends ConsumerWidget {
                                 ),
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(bottom: 8.0),
                             ),
                             Text(
@@ -112,7 +113,7 @@ class DateSelectHorizontalScrollWidget extends ConsumerWidget {
                               style: TextStyle(
                                 color:
                                     e.date == selectDate || dayOfTheWeek == '오늘'
-                                        ? Color.fromARGB(255, 7, 105, 254)
+                                        ? const Color.fromARGB(255, 7, 105, 254)
                                         : dayOfTheWeek == '일'
                                             ? Colors.red
                                             : Colors.black,

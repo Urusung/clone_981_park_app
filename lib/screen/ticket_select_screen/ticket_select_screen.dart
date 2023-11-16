@@ -18,14 +18,14 @@ class TicketSelectScreen extends ConsumerWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
-        systemOverlayStyle: SystemUiOverlayStyle(
+        systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
           statusBarIconBrightness: Brightness.dark,
           systemNavigationBarColor: Colors.black,
         ),
         elevation: 0,
         centerTitle: false,
-        titleTextStyle: TextStyle(
+        titleTextStyle: const TextStyle(
           color: Colors.black,
           fontSize: 17,
           fontWeight: FontWeight.w500,
@@ -36,7 +36,7 @@ class TicketSelectScreen extends ConsumerWidget {
           children: [
             IconButton(
               splashRadius: 24,
-              icon: Icon(
+              icon: const Icon(
                 CupertinoIcons.chevron_left,
               ),
               onPressed: () {},
@@ -45,10 +45,10 @@ class TicketSelectScreen extends ConsumerWidget {
               width: 21,
               height: 21,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 7, 105, 254),
+                color: const Color.fromARGB(255, 7, 105, 254),
                 borderRadius: BorderRadius.circular(10.5),
               ),
-              child: Center(
+              child: const Center(
                 child: Text(
                   '1',
                   style: TextStyle(
@@ -59,12 +59,12 @@ class TicketSelectScreen extends ConsumerWidget {
                 ),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(
                 right: 12.0,
               ),
             ),
-            Text(
+            const Text(
               '티켓 선택',
               style: TextStyle(
                 color: Colors.black,
@@ -77,19 +77,19 @@ class TicketSelectScreen extends ConsumerWidget {
         actions: [
           IconButton(
             splashRadius: 24,
-            icon: Icon(
+            icon: const Icon(
               CupertinoIcons.xmark,
             ),
             onPressed: () {},
           ),
         ],
       ),
-      backgroundColor: Color.fromARGB(255, 243, 243, 243),
+      backgroundColor: const Color.fromARGB(255, 243, 243, 243),
       body: basicValue.when(
         data: (data) {
           return ListView(
-            physics: ClampingScrollPhysics(),
-            padding: EdgeInsets.all(16.0),
+            physics: const ClampingScrollPhysics(),
+            padding: const EdgeInsets.all(16.0),
             children: [
               Container(
                 decoration: BoxDecoration(
@@ -102,13 +102,13 @@ class TicketSelectScreen extends ConsumerWidget {
                     TicketInformaionWidget(
                         data: data, deviceWidth: deviceWidth),
                     Container(
-                      margin: EdgeInsets.all(16.0),
+                      margin: const EdgeInsets.all(16.0),
                       height: 0.2,
-                      color: Color.fromARGB(255, 206, 206, 206),
+                      color: const Color.fromARGB(255, 206, 206, 206),
                     ),
                     Container(
-                      padding: EdgeInsets.only(right: 18.0, left: 18.0),
-                      child: Row(
+                      padding: const EdgeInsets.only(right: 18.0, left: 18.0),
+                      child: const Row(
                         children: [
                           TicketAdditionalWidget(
                             data: 'GR-E/D',
@@ -131,7 +131,7 @@ class TicketSelectScreen extends ConsumerWidget {
                         Container(
                           width: 6,
                           height: 12,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color.fromARGB(255, 243, 243, 243),
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(6),
@@ -140,19 +140,19 @@ class TicketSelectScreen extends ConsumerWidget {
                         ),
                         Expanded(
                           child: Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                                 top: 16.0,
                                 bottom: 16.0,
                                 right: 10.0,
                                 left: 10.0),
                             height: 0.2,
-                            color: Color.fromARGB(255, 206, 206, 206),
+                            color: const Color.fromARGB(255, 206, 206, 206),
                           ),
                         ),
                         Container(
                           width: 6,
                           height: 12,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color.fromARGB(255, 243, 243, 243),
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(6),
@@ -161,7 +161,7 @@ class TicketSelectScreen extends ConsumerWidget {
                         ),
                       ],
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.only(
                         left: 16.0,
                         right: 16.0,
@@ -175,7 +175,7 @@ class TicketSelectScreen extends ConsumerWidget {
             ],
           );
         },
-        loading: () => Center(
+        loading: () => const Center(
           child: CupertinoActivityIndicator(),
         ),
         error: (error, stackTrace) {

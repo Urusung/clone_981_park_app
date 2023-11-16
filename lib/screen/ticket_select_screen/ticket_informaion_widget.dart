@@ -14,7 +14,7 @@ class TicketInformaionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         top: 16.0,
         left: 16.0,
         right: 16.0,
@@ -33,7 +33,7 @@ class TicketInformaionWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(6),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(right: 16.0),
               ),
               Text(
@@ -50,26 +50,22 @@ class TicketInformaionWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
-                NumberFormat('###,###,###,###')
-                        .format(data[0].data.ticketPrice) +
-                    '원',
+                '${NumberFormat('###,###,###,###').format(data[0].data.ticketPrice)}원',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   decoration: TextDecoration.lineThrough,
-                  color: Color.fromARGB(255, 206, 206, 206),
+                  color: const Color.fromARGB(255, 206, 206, 206),
                   fontSize: deviceWidth / 28,
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(
                   bottom: 4.0,
                 ),
               ),
               Text(
-                NumberFormat('###,###,###,###')
-                        .format(data[0].data.ticketSalePrice) +
-                    '원',
+                '${NumberFormat('###,###,###,###').format(data[0].data.ticketSalePrice)}원',
                 style: TextStyle(
                   color: Colors.red,
                   fontSize: deviceWidth / 22,

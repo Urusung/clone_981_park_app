@@ -16,7 +16,7 @@ class TimeSelectGrideWidget extends ConsumerWidget {
     final basicValue = ref.watch(TimeProvider);
     return Expanded(
       child: Container(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           top: 28.0,
           left: 16.0,
           right: 16.0,
@@ -25,7 +25,7 @@ class TimeSelectGrideWidget extends ConsumerWidget {
           data: (data) {
             return ShaderMask(
               shaderCallback: (Rect bound) {
-                return LinearGradient(
+                return const LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [Colors.white, Colors.transparent],
@@ -33,9 +33,10 @@ class TimeSelectGrideWidget extends ConsumerWidget {
               },
               blendMode: BlendMode.dstIn,
               child: ScrollConfiguration(
-                behavior: MaterialScrollBehavior().copyWith(overscroll: false),
+                behavior:
+                    const MaterialScrollBehavior().copyWith(overscroll: false),
                 child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                     childAspectRatio: 1.38,
                   ),
@@ -50,8 +51,8 @@ class TimeSelectGrideWidget extends ConsumerWidget {
                                         data[0].data.timeList[index].timeSlot);
                               },
                               child: Container(
-                                margin: EdgeInsets.all(4),
-                                padding: EdgeInsets.all(
+                                margin: const EdgeInsets.all(4),
+                                padding: const EdgeInsets.all(
                                   14.0,
                                 ),
                                 decoration: BoxDecoration(
@@ -60,7 +61,7 @@ class TimeSelectGrideWidget extends ConsumerWidget {
                                   ),
                                   color: selectTime ==
                                           data[0].data.timeList[index].timeSlot
-                                      ? Color.fromARGB(255, 7, 105, 254)
+                                      ? const Color.fromARGB(255, 7, 105, 254)
                                       : Colors.white,
                                   borderRadius: BorderRadius.circular(8),
                                 ),
@@ -91,7 +92,7 @@ class TimeSelectGrideWidget extends ConsumerWidget {
                                         ? Text(
                                             '가능',
                                             style: TextStyle(
-                                                color: Color.fromARGB(
+                                                color: const Color.fromARGB(
                                                     255, 82, 255, 0),
                                                 fontSize: deviceWidth / 26,
                                                 fontWeight: FontWeight.w400),
@@ -108,12 +109,12 @@ class TimeSelectGrideWidget extends ConsumerWidget {
                               ),
                             )
                           : Container(
-                              margin: EdgeInsets.all(6),
-                              padding: EdgeInsets.all(
+                              margin: const EdgeInsets.all(6),
+                              padding: const EdgeInsets.all(
                                 16.0,
                               ),
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 221, 221, 221),
+                                color: const Color.fromARGB(255, 221, 221, 221),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Column(
@@ -123,16 +124,16 @@ class TimeSelectGrideWidget extends ConsumerWidget {
                                   Text(
                                     data[0].data.timeList[index].timeSlot,
                                     style: TextStyle(
-                                        color:
-                                            Color.fromARGB(255, 170, 170, 170),
+                                        color: const Color.fromARGB(
+                                            255, 170, 170, 170),
                                         fontSize: deviceWidth / 22,
                                         fontWeight: FontWeight.w400),
                                   ),
                                   Text(
                                     '매진',
                                     style: TextStyle(
-                                        color:
-                                            Color.fromARGB(255, 170, 170, 170),
+                                        color: const Color.fromARGB(
+                                            255, 170, 170, 170),
                                         fontSize: deviceWidth / 26,
                                         fontWeight: FontWeight.w400),
                                   ),
@@ -147,7 +148,7 @@ class TimeSelectGrideWidget extends ConsumerWidget {
               ),
             );
           },
-          loading: () => CupertinoActivityIndicator(),
+          loading: () => const CupertinoActivityIndicator(),
           error: (error, stackTrace) {
             print(error);
             return Container();

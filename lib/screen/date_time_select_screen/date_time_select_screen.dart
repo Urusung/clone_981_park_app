@@ -60,7 +60,7 @@ class _DateTimeSelectSelectScreen extends ConsumerState<DateTimeSelectScreen> {
         foregroundColor: Colors.black,
         elevation: 0,
         centerTitle: false,
-        titleTextStyle: TextStyle(
+        titleTextStyle: const TextStyle(
           color: Colors.black,
           fontSize: 17,
           fontWeight: FontWeight.w500,
@@ -69,7 +69,7 @@ class _DateTimeSelectSelectScreen extends ConsumerState<DateTimeSelectScreen> {
           children: [
             IconButton(
               splashRadius: 24,
-              icon: Icon(
+              icon: const Icon(
                 CupertinoIcons.chevron_left,
               ),
               onPressed: () {
@@ -84,10 +84,10 @@ class _DateTimeSelectSelectScreen extends ConsumerState<DateTimeSelectScreen> {
               width: 21,
               height: 21,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 7, 105, 254),
+                color: const Color.fromARGB(255, 7, 105, 254),
                 borderRadius: BorderRadius.circular(10.5),
               ),
-              child: Center(
+              child: const Center(
                 child: Text(
                   '2',
                   style: TextStyle(
@@ -98,12 +98,12 @@ class _DateTimeSelectSelectScreen extends ConsumerState<DateTimeSelectScreen> {
                 ),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(
                 right: 12.0,
               ),
             ),
-            Text(
+            const Text(
               '날짜 시간 선택',
               style: TextStyle(
                 color: Colors.black,
@@ -116,7 +116,7 @@ class _DateTimeSelectSelectScreen extends ConsumerState<DateTimeSelectScreen> {
         actions: [
           IconButton(
             splashRadius: 24,
-            icon: Icon(
+            icon: const Icon(
               CupertinoIcons.xmark,
             ),
             onPressed: () {},
@@ -131,12 +131,12 @@ class _DateTimeSelectSelectScreen extends ConsumerState<DateTimeSelectScreen> {
               return DateSelectHorizontalScrollWidget(
                   scrollController: scrollController, data: data);
             },
-            loading: () => CupertinoActivityIndicator(),
-            error: (error, stackTrace) => Text('error'),
+            loading: () => const CupertinoActivityIndicator(),
+            error: (error, stackTrace) => const Text('error'),
           ),
-          TimeSelectGrideWidget(),
-          DateTimeNextButtonWidget(),
-          Padding(
+          const TimeSelectGrideWidget(),
+          const DateTimeNextButtonWidget(),
+          const Padding(
             padding: EdgeInsets.only(
               bottom: 24.0,
             ),

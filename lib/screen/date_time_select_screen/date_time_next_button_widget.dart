@@ -24,8 +24,8 @@ class DateTimeNextButtonWidget extends ConsumerWidget {
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(
           selectTime == ''
-              ? Color.fromARGB(255, 221, 221, 221)
-              : Color.fromARGB(255, 7, 105, 254),
+              ? const Color.fromARGB(255, 221, 221, 221)
+              : const Color.fromARGB(255, 7, 105, 254),
         ),
         fixedSize: MaterialStateProperty.all(
           Size(
@@ -54,7 +54,7 @@ class DateTimeNextButtonWidget extends ConsumerWidget {
         '다음',
         style: TextStyle(
           color: selectTime == ''
-              ? Color.fromARGB(255, 170, 170, 170)
+              ? const Color.fromARGB(255, 170, 170, 170)
               : Colors.white,
           fontSize: deviceWidth / 22,
           fontWeight: FontWeight.w400,
@@ -83,7 +83,7 @@ class DateTimeNextButtonWidget extends ConsumerWidget {
         return Wrap(
           children: [
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 32.0,
                 left: 24,
                 right: 24,
@@ -98,7 +98,7 @@ class DateTimeNextButtonWidget extends ConsumerWidget {
                       Text(
                         '상품명',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 170, 170, 170),
+                          color: const Color.fromARGB(255, 170, 170, 170),
                           fontSize: deviceWidth / 24,
                           fontWeight: FontWeight.w400,
                         ),
@@ -116,9 +116,9 @@ class DateTimeNextButtonWidget extends ConsumerWidget {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 12.0, bottom: 24.0),
+                    margin: const EdgeInsets.only(top: 12.0, bottom: 24.0),
                     height: 0.2,
-                    color: Color.fromARGB(255, 206, 206, 206),
+                    color: const Color.fromARGB(255, 206, 206, 206),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,7 +126,7 @@ class DateTimeNextButtonWidget extends ConsumerWidget {
                       Text(
                         '날짜시간',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 170, 170, 170),
+                          color: const Color.fromARGB(255, 170, 170, 170),
                           fontSize: deviceWidth / 24,
                           fontWeight: FontWeight.w400,
                         ),
@@ -147,9 +147,9 @@ class DateTimeNextButtonWidget extends ConsumerWidget {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 24.0, bottom: 24.0),
+                    margin: const EdgeInsets.only(top: 24.0, bottom: 24.0),
                     height: 0.2,
-                    color: Color.fromARGB(255, 206, 206, 206),
+                    color: const Color.fromARGB(255, 206, 206, 206),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -157,7 +157,7 @@ class DateTimeNextButtonWidget extends ConsumerWidget {
                       Text(
                         '구매인원',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 170, 170, 170),
+                          color: const Color.fromARGB(255, 170, 170, 170),
                           fontSize: deviceWidth / 24,
                           fontWeight: FontWeight.w400,
                         ),
@@ -174,12 +174,12 @@ class DateTimeNextButtonWidget extends ConsumerWidget {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 24.0),
+                    margin: const EdgeInsets.only(top: 24.0),
                     height: 0.2,
-                    color: Color.fromARGB(255, 206, 206, 206),
+                    color: const Color.fromARGB(255, 206, 206, 206),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 48.0, bottom: 48.0),
+                    padding: const EdgeInsets.only(top: 48.0, bottom: 48.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -208,7 +208,7 @@ class DateTimeNextButtonWidget extends ConsumerWidget {
                   TextButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(255, 7, 105, 254),
+                        const Color.fromARGB(255, 7, 105, 254),
                       ),
                       fixedSize: MaterialStateProperty.all(
                         Size(

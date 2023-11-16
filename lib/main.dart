@@ -16,7 +16,7 @@ Future<void> main() async {
   ]);
   FlutterNativeSplash.remove();
   runApp(
-    ProviderScope(
+    const ProviderScope(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: TicketSelectScreen(),

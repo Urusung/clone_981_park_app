@@ -7,9 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
 class TicketTwoButtonWidget extends ConsumerWidget {
-  const TicketTwoButtonWidget({
-    super.key,
-  });
+  const TicketTwoButtonWidget({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -22,7 +20,7 @@ class TicketTwoButtonWidget extends ConsumerWidget {
         TextButton(
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(
-              Color.fromARGB(255, 248, 248, 248),
+              const Color.fromARGB(255, 248, 248, 248),
             ),
             fixedSize: MaterialStateProperty.all(
               Size(
@@ -49,7 +47,7 @@ class TicketTwoButtonWidget extends ConsumerWidget {
         TextButton(
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(
-              Color.fromARGB(255, 7, 105, 254),
+              const Color.fromARGB(255, 7, 105, 254),
             ),
             fixedSize: MaterialStateProperty.all(
               Size(
@@ -98,7 +96,7 @@ class TicketTwoButtonWidget extends ConsumerWidget {
             final numberOfPeopleToPurchaseValue =
                 ref.watch(NumberOfPeopleToPurchaseProvider);
             return Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 42,
                 left: 24,
                 right: 24,
@@ -111,7 +109,7 @@ class TicketTwoButtonWidget extends ConsumerWidget {
                     basicValue.asData!.value[0].data.productDisplayName
                         .replaceAll('\\n', '\n'),
                     style: TextStyle(
-                      color: Color.fromARGB(255, 170, 170, 170),
+                      color: const Color.fromARGB(255, 170, 170, 170),
                       fontSize: deviceWidth / 22,
                       fontWeight: FontWeight.w400,
                     ),
@@ -129,14 +127,14 @@ class TicketTwoButtonWidget extends ConsumerWidget {
                     textAlign: TextAlign.end,
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 12.0, bottom: 12.0),
+                    margin: const EdgeInsets.only(top: 12.0, bottom: 12.0),
                     height: 0.2,
-                    color: Color.fromARGB(255, 206, 206, 206),
+                    color: const Color.fromARGB(255, 206, 206, 206),
                   ),
                   Text(
                     '구매할 인원 선택헤주세요',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 170, 170, 170),
+                      color: const Color.fromARGB(255, 170, 170, 170),
                       fontSize: deviceWidth / 22,
                       fontWeight: FontWeight.w400,
                     ),
@@ -154,7 +152,7 @@ class TicketTwoButtonWidget extends ConsumerWidget {
                                     .state--;
                               }
                             : null,
-                        borderRadius: BorderRadius.all(
+                        borderRadius: const BorderRadius.all(
                           Radius.circular(50),
                         ),
                         child: SizedBox(
@@ -167,13 +165,13 @@ class TicketTwoButtonWidget extends ConsumerWidget {
                               height: deviceWidth / 10,
                               decoration: BoxDecoration(
                                 color: numberOfPeopleToPurchaseValue == 1
-                                    ? Color.fromARGB(255, 203, 203, 203)
-                                    : Color.fromARGB(255, 7, 105, 254),
+                                    ? const Color.fromARGB(255, 203, 203, 203)
+                                    : const Color.fromARGB(255, 7, 105, 254),
                                 borderRadius: BorderRadius.circular(
                                   deviceWidth / 12,
                                 ),
                               ),
-                              child: Divider(
+                              child: const Divider(
                                 color: Colors.white,
                                 thickness: 2,
                               ),
@@ -188,7 +186,7 @@ class TicketTwoButtonWidget extends ConsumerWidget {
                           child: Text(
                             numberOfPeopleToPurchaseValue.toString(),
                             style: TextStyle(
-                              color: Color.fromARGB(255, 7, 105, 254),
+                              color: const Color.fromARGB(255, 7, 105, 254),
                               fontSize: deviceWidth / 5,
                               fontWeight: FontWeight.w400,
                             ),
@@ -204,7 +202,7 @@ class TicketTwoButtonWidget extends ConsumerWidget {
                                     .state++;
                               }
                             : null,
-                        borderRadius: BorderRadius.all(
+                        borderRadius: const BorderRadius.all(
                           Radius.circular(50),
                         ),
                         child: SizedBox(
@@ -217,13 +215,13 @@ class TicketTwoButtonWidget extends ConsumerWidget {
                               height: deviceWidth / 10,
                               decoration: BoxDecoration(
                                 color: numberOfPeopleToPurchaseValue < 8
-                                    ? Color.fromARGB(255, 7, 105, 254)
-                                    : Color.fromARGB(255, 203, 203, 203),
+                                    ? const Color.fromARGB(255, 7, 105, 254)
+                                    : const Color.fromARGB(255, 203, 203, 203),
                                 borderRadius: BorderRadius.circular(
                                   deviceWidth / 12,
                                 ),
                               ),
-                              child: Stack(
+                              child: const Stack(
                                 alignment: Alignment.center,
                                 children: [
                                   Divider(
@@ -245,7 +243,7 @@ class TicketTwoButtonWidget extends ConsumerWidget {
                   TextButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(255, 7, 105, 254),
+                        const Color.fromARGB(255, 7, 105, 254),
                       ),
                       fixedSize: MaterialStateProperty.all(
                         Size(
@@ -262,7 +260,7 @@ class TicketTwoButtonWidget extends ConsumerWidget {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => DateTimeSelectScreen(),
+                          builder: (context) => const DateTimeSelectScreen(),
                         ),
                       );
                     },
